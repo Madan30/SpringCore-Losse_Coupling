@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- good practice <bean id="MathCheatObjectValue" class="com.NepalCode.loosecoupling.MathCheat"></bean> 
+		<bean id="student" class="com.NepalCode.loosecoupling.Student"> <property 
+		name="id" value="1002" /> <property name="mathCheat" ref="MathCheatObjectValue" 
+		/> </bean> <bean id="ScienceCheatObjectValue" class="com.NepalCode.loosecoupling.ScienceCheat"> 
+		</bean> <bean id="studentscienc" class="com.NepalCode.loosecoupling.Student"> 
+		<property name="id" value="2002" /> <property name="scienceCheat" ref="ScienceCheatObjectValue" 
+		/> </bean> -->
+
+<bean id="mathCheatObjectValue" class="com.NepalCode.loosecoupling.MathCheat"/>
+<bean id="scienceCheatObjectValue" class="com.NepalCode.loosecoupling.ScienceCheat"/>
+
+<bean id="stud" class="com.NepalCode.loosecoupling.Student">
+<property name="cheat" ref="scienceCheatObjectValue"/>
+
+</bean>
+
+
+
+
+</beans>
